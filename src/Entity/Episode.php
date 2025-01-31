@@ -23,6 +23,10 @@ class Episode
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $release_date = null;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?season $season_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +64,18 @@ class Episode
     public function setReleaseDate(?\DateTimeInterface $release_date): static
     {
         $this->release_date = $release_date;
+
+        return $this;
+    }
+
+    public function getSeasonId(): ?season
+    {
+        return $this->season_id;
+    }
+
+    public function setSeasonId(season $season_id): static
+    {
+        $this->season_id = $season_id;
 
         return $this;
     }

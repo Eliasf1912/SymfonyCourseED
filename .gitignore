@@ -1,7 +1,6 @@
 
 ###> symfony/framework-bundle ###
 /.env.dev
-/.env
 /.env.test
 /.env.local
 /.env.local.php
