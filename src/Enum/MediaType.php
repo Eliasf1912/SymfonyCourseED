@@ -3,8 +3,8 @@
   Namespace App\Enum;
 
   enum MediaType: string {
-    case Image = 'jpg';
-    case Film = 'mp3';
+    case MOVIE = 'movie';
+    case TV_SHOW = 'tv_show';
   }
 
 ?>
