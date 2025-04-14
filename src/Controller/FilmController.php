@@ -35,13 +35,13 @@ final class FilmController extends AbstractController
     #[Route('/List', name: 'app_list')]
     public function List(): Response
     {
-        return $this->render('Film/List.html.twig');
+        return $this->render('Film/lists.html.twig');
     }
 
     #[Route('/Subscriptions', name: 'app_subscriptions')]
     public function Subscription(): Response
     {
-        return $this->render('Film/subscription.html.twig');
+        return $this->render('Film/subscriptions.html.twig');
     }
 
     #[Route('/Upload', name: 'app_upload')]
